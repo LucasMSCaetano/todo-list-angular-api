@@ -3,20 +3,16 @@ import { db } from '../db';
 
 export const UserModel = db.define('user', {
   id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
+    type: DataTypes.STRING,
     allowNull: false,
     primaryKey: true
   },
-  email: {
+  username: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  nome: {
+  password: {
     type: DataTypes.STRING,
     allowNull: false
-  },
-  idade: {
-    type: DataTypes.INTEGER
   }
 });
